@@ -1,0 +1,8 @@
+@include respond-to($bp-lg){
+    .hero{
+        width: 40%;
+        justify-items: center;
+        display: block;
+        margin: 0 auto 0 auto;
+    }
+}

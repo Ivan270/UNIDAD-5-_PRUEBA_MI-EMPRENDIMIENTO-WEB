@@ -1,0 +1,16 @@
+.button {
+    border: 1px groove $white;
+    border-radius: 3px;
+    padding: 5px 3px;
+    font-family: $poppins;
+    background-color: $tangerine;
+    &:hover{
+        background-color: $white;
+    }
+}
+@include respond-to($bp-lg) {
+    .button{
+        padding: 2px 3px;
+
+    }
+}

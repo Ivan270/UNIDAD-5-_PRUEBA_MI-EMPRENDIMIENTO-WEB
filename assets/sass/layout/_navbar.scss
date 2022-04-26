@@ -1,0 +1,53 @@
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $black;
+    &__menu{
+        display:none;
+    }
+    &__logo{
+        display: flex;
+    }
+    &__image{
+        height: 35px;
+        width: 35px;
+        transition: transform 1s linear;
+        &:hover{
+            transform: rotate(360deg)
+        }
+    }
+    &__bars{
+        color: $white;
+        transition: transform 1s linear;
+        &:hover{
+            color: $orange;
+        }
+    }
+}
+
+// Breakpoints
+@include respond-to($bp-lg){
+    .navbar__menu{
+        display: block;
+        font-family: $poppins;
+        font-size: $x-small;
+        font-weight: $bold;
+        ul {
+            list-style-type: none;
+            display: flex;
+            column-gap: 20px;
+            a {
+                color: $white;
+                text-decoration: none;
+                &:hover{
+                    color: $tangerine;
+                }
+            }
+        }
+    }
+    .navbar__bars{
+        display: none;
+    }
+}

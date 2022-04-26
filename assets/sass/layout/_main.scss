@@ -1,0 +1,121 @@
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+}
+.cursos{
+    grid-column: span 2;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid $charcoal;
+    &__cards{
+        border: 1px dotted $charcoal;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+    &__title{
+        font-size: $large;
+        margin: 10px 0px;
+    }
+    &__text{
+        line-height: 25px;
+        text-align: justify;
+    }
+    &__subtitle{
+        font-size: $medium;
+        margin: 10px 0;
+    }
+    &__reactions{
+        display: flex;
+    }
+    &__count{
+        margin: 0px 9px 0px 4px;
+    }
+    
+}
+
+.info{
+    grid-column: span 2;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid $charcoal;
+    &__about{
+        padding: 10px;
+    }
+    &__image{
+        width: 150px;
+        display: block;
+        margin: 0px auto 10px auto;
+        border-radius: 50%;
+        border: 1px solid $charcoal;
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: 10px;
+        &--emphasized{
+            padding: 2px 0px;
+            background-color: #505050;
+            color: white;
+            font-size: $medium;
+        }
+    }
+    &__icons{
+        text-align: center;
+        margin-bottom: 10px;
+        i {
+            padding-right: 10px;
+        }
+    }
+    &__text{
+        line-height: 25px;
+        text-align: justify;
+    }
+    
+    &__more{
+        margin: 0px 10px 20px 10px;
+        ul {
+            padding: 0px;
+            list-style-type: circle;
+            font-family: $poppins;
+            font-size: $x-small;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    &__links{
+        margin-left: 15px;
+    }
+}
+.animated-icon{
+    display: block;
+    margin: 0px auto 20px auto;
+    width: 200px;
+    &__svg{
+        position: relative;
+    }
+}
+.icon-brackets{
+    animation: wiggle 1s linear infinite alternate;
+}
+.icon-engranaje{
+    transform-origin: 80% 80%;
+    animation: rotation 2s linear infinite;
+}
+// Breakpoints
+@include respond-to($bp-md){
+    .main{
+        grid-template-columns: 1fr 1fr;
+    }
+    .cursos{
+        grid-column: 1 / 2;
+    }
+    .info{
+        grid-column: 2 / 3;
+    }
+}
+@include respond-to($bp-lg){
+    .cursos__image{
+        width: 100%;
+    }
+}

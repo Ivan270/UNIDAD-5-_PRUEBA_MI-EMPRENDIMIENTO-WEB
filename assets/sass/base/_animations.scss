@@ -1,0 +1,9 @@
+/* Animations */
+@keyframes wiggle {
+    from { transform: translateX(0px); }
+    to { transform: translateX(150px); }
+}
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

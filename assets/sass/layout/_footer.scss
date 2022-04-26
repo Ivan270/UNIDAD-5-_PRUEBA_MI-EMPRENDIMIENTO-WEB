@@ -1,0 +1,67 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 25px;
+    background-color: $black;
+    &__copyrights{
+        color: $white;
+        margin-bottom: 20px;
+        p {
+            font-family: $poppins;
+            font-size: $small;
+        }
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        a {
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}
+
+// Breakpoints
+@include respond-to($bp-lg){
+    .footer{
+        padding: 20px 15px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        
+        &__copyrights{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            
+            p {
+                font-size: $x-small;
+            }
+        }
+        &__form{
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            column-gap: 30px;
+            a {
+                font-family: $poppins;
+                font-size: $x-small;
+                margin: 0;
+                &:hover{
+                    color:$tangerine;
+                }
+            }
+        }
+        .form-container{
+            display: flex;
+            align-items: center;
+            input {
+                margin: 0 5px 0 0;
+            }
+        }
+    }
+}
